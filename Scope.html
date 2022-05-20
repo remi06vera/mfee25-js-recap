@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>作用域 scrope</title>
+  </head>
+  <body>
+    <script> 
+      //函式作用域 function scope
+      function scope() {
+        var varFunc = 1;
+        let letFunc = 1;
+      }
+      //console.log(varFunc); //外面讀不到 -->var為函式作用域
+      console.log(letFunc); //外面讀不到
+
+      //============
+
+      if(true){
+          var varBlock =2;
+          let letFunc = 2;
+
+      }
+      console.log(varBlock); //這裡就讀得到了-->因為if 是block scope
+      console.log(letFunc); //一樣讀不到
+
+      //============
+      //總結
+      // var-->函式作用域 
+      //let const-->區域作用域
+    </script>
+  </body>
+</html>

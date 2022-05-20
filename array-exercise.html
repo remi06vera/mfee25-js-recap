@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let animals = [
+        { id: "a1", en: "cat", cn: "貓", num: 30 },
+        { id: "a2", en: "dog", cn: "狗", num: 10 },
+        { id: "a3", en: "rabbit", cn: "兔", num: 5 },
+        { id: "a4", en: "bear", cn: "熊", num: 15 },
+        { id: "a5", en: "mouse", cn: "鼠", num: 20 },
+      ];
+      //TODO: 任務1:每個物件中加上新的屬性size，且value為 ‘small’
+      //1. forEach
+      // animals.forEach((animal,index)=>{
+      //   animal["size"]="smail"
+      //   console.log(animal);
+      // })
+
+      //2.map
+    //   let newAnimals = animals.map((animal, index) => {
+    //     let newAnimal = { ...animal }; //只需要每個animal裡的值,故用 ...
+    //     newAnimal.size="small"  //方法1
+    //     // newAnimal["size"] = "small"; //方法2
+    //     return newAnimal;
+    //   });
+    //   console.log(newAnimals);
+    let newAnimals = animals.map((animal, index) => {
+        return {...animal,size:'small'};
+      });
+      console.log(newAnimals);
+
+      //TODO: 任務2:找到熊，將其size改為 ‘large’
+      //步驟1:先找到熊
+      let findBear = newAnimals.filter((bear, index) => {
+        return bear.cn === "熊";
+      });
+      console.log(findBear);
+      //步驟2:size改成large
+      let newBear={...findBear,size:"large"}
+      console.log(newBear);
+
+      //TODO: 任務3:展開運算子在index = 2的資料後面新增一筆資料
+    </script>
+  </body>
+</html>
