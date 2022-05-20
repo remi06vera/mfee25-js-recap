@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise</title>
+  </head>
+  <body>
+    <script>
+      //練習1: 函式的return + 箭頭函式
+
+      //if/else陳述式
+      //   let age = 10;
+      //   if (age > 18) {
+      //     console.log("成人");
+      //   } else if (age < 18 && age > 12) {
+      //     console.log("青少年");
+      //   }else{
+      //       console.log("兒童");
+      //   }
+
+      //改寫成function return的寫法
+      let age = 13;
+      let handleAge = () => {
+        if (age > 18) {
+          return "成人";
+        } else if (age < 18 && age > 12) {
+          return "青少年";
+        } else {
+          return "兒童";
+        }
+      };
+      console.log(handleAge());
+      //============================================================
+
+      //練習2: 有引數的IIFE
+
+      //switch陳述式
+    //   let color = "pink";
+    //   switch (color) {
+    //     case "red":
+    //       console.log("紅色");
+    //       break;
+    //     case "blue":
+    //       console.log("藍色");
+    //       break;
+    //     default:
+    //       console.log("其他顏色");
+    //   }
+
+      //改寫成function的寫法
+      //寫法1
+        let color = "pink";
+        (()=>{
+            switch (color) {
+            case "red":
+            console.log("紅色");
+            break;
+            case "blue":
+            console.log("藍色");
+            break;
+            default:
+            console.log("其他顏色");
+        }
+        })(color)
+
+        //寫法2
+        // ((color)=>{
+        //     switch (color) {
+        //     case "red":
+        //     console.log("紅色");
+        //     break;
+        //     case "blue":
+        //     console.log("藍色");
+        //     break;
+        //     default:
+        //     console.log("其他顏色");
+        // }
+        // })("pink")
+
+    </script>
+  </body>
+</html>
